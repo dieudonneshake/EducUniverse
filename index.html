@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduHelper - Your Learning Companion</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    /* Add this to your CSS */
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+    
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      will-change: opacity;
+    }
+    
+    .slide.active {
+      opacity: 1;
+    }
+    
+    .slideshow-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right, 
+        rgba(0,0,0,0.6) 0%, 
+        rgba(0,0,0,0.3) 50%, 
+        rgba(0,0,0,0) 100%
+      );
+      z-index: 1;
+    }
+  </style>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+  <div class="container">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <i class="fas fa-graduation-cap"></i>
+        <span>EduHelper</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="contact.html">Contact</a>
+        <div class="header-auth">
+          <a href="auth/login.html" class="btn-mobile">
+          <i class="fas fa-sign-in-alt"></i> Log In
+        </a>
+        <a href="auth/register.html" class="btn-mobile btn-signup">
+          <i class="fas fa-user-plus"></i> Sign Up
+        </a>
+        </div>
+      </nav>
+      
+      <!-- Mobile Navigation Toggle -->
+      <button class="mobile-nav-toggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-nav">
+    <div class="mobile-nav-content">
+      <a href="about.html" class="mobile-nav-link">
+        <i class="fas fa-info-circle"></i> About
+      </a>
+      <a href="features.html" class="mobile-nav-link">
+        <i class="fas fa-star"></i> Features
+      </a>
+      <a href="contact.html" class="mobile-nav-link">
+        <i class="fas fa-envelope"></i> Contact
+      </a>
+      <div class="auth-mobile">
+        <a href="auth/login.html" class="btn-mobile">
+          <i class="fas fa-sign-in-alt"></i> Log In
+        </a>
+        <a href="auth/register.html" class="btn-mobile btn-signup">
+          <i class="fas fa-user-plus"></i> Sign Up
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- Main Content -->
+ <body>
+  <!-- Header remains the same as before -->
+  
+  <main class="welcome-main">
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Background Slideshow -->
+  <div class="hero-background">
+    <div class="slide active" style="background-image: url('assets/images/course-1.jpg')"></div>
+    <div class="slide" style="background-image: url('assets/images/course-2.jpg')"></div>
+    <div class="slide" style="background-image: url('assets/images/course-3.jpg')"></div>
+    <div class="slideshow-overlay"></div>
+  </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Unlock Your <span class="highlight">Learning Potential</span></h1>
+        <p class="hero-subtitle">Personalized educational resources for Nursery, Primary, and Secondary students</p>
+        <div class="hero-buttons">
+          <a href="auth/register.html" class="btn-hero btn-hero-primary">Get Started</a>
+          <a href="#features" class="btn-hero btn-hero-secondary">
+            <i class="fas fa-play"></i> See How It Works
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-circle">
+        <img src="assets/images/cat-2.jpg" alt="Students learning" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="section-header">
+        <h2 style="color: rgb(73, 73, 206);">Why Choose EduHelper?</h2>
+        <p class="section-subtitle">Designed by educators for maximum learning impact</p>
+      </div>
+      
+<div class="features-grid">
+  <div class="feature-card">
+    <div class="feature-icon bg-purple">
+      <i class="fas fa-book-open"></i>
+    </div>
+    <h3>Structured Curriculum</h3>
+    <p>Follows standard educational pathways from Nursery through Secondary</p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon bg-purple">
+      <i class="fas fa-users"></i>
+    </div>
+    <h3>Qualified and global Teachers</h3>
+    <p>Expert educators with specialized training</p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon bg-purple">
+      <i class="fas fa-laptop"></i>
+    </div>
+    <h3>Digital and real helpful Resources</h3>
+    <p>Interactive learning materials for all devices</p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon bg-purple">
+      <i class="fas fa-chart-line"></i>
+    </div>
+    <h3>Progress and grades Tracking</h3>
+    <p>Monitor student development and achievements</p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon bg-purple">
+      <i class="fas fa-question-circle"></i>
+    </div>
+    <h3>Specific to individual Support System</h3>
+    <p>24/7 assistance for students and parents</p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon bg-purple">
+      <i class="fas fa-award"></i>
+    </div>
+    <h3>Certification and Global recognition</h3>
+    <p>Recognized completion certificates</p>
+  </div>
+</div>
+        
+        <!-- Add 2 more feature cards similarly -->
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <!-- Content here -->
+    </section>
+  </main>
+
+  <!-- Footer remains the same -->
+</body>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fas fa-graduation-cap"></i>
+          <span>EduHelper</span>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Connect</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2023 EduHelper. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize slideshow
+      const slides = document.querySelectorAll('.hero-background .slide');
+      if (slides.length > 0) {
+        let currentSlide = 0;
+        
+        // Show first slide immediately
+        slides[currentSlide].classList.add('active');
+        
+        function nextSlide() {
+          // Fade out current slide
+          slides[currentSlide].classList.remove('active');
+          
+          // Move to next slide (loop back to 0 if at end)
+          currentSlide = (currentSlide + 1) % slides.length;
+          
+          // Fade in next slide
+          slides[currentSlide].classList.add('active');
+        }
+        
+        // Start slideshow (change every 5 seconds)
+        setInterval(nextSlide, 5000);
+        
+        // Optional: Preload all slide images
+        slides.forEach(slide => {
+          const img = new Image();
+          img.src = slide.style.backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/i, '$1');
+        });
+      }
+      
+      // Rest of your JavaScript...
+    });
+    // In your slideshow initialization
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Start slideshow only when hero section is visible
+      const slideInterval = setInterval(nextSlide, 5000);
+      
+      // Cleanup when hero section leaves view
+      return () => clearInterval(slideInterval);
+    }
+  });
+}, {threshold: 0.1});
+
+observer.observe(document.querySelector('.hero'));
+  </script>
+
+</body>
+</html>
